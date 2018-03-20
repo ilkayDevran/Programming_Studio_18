@@ -51,10 +51,9 @@ public class CropImage {
             try {
                 /* getSubimage( X, Y, W, H) */
                 if (i + 1 != percentages.length) {
-                    subImgage = originalImage.getSubimage(0, (int) (originalImage.getHeight() * percentages[i] / 100.0), originalImage.getWidth(), (int) (originalImage.getHeight() * (percentages[i + 1] - percentages[i]) / 100.0));
+                    subImgage = originalImage.getSubimage(/*x,y,w,h*/);
                 } else {
-                    subImgage = originalImage.getSubimage(0, (int) (originalImage.getHeight() * percentages[i] / 100.0), originalImage.getWidth(), (int) ((originalImage.getHeight()) - (originalImage.getHeight() * (percentages[i]) / 100.0)));
-                }
+                    subImgage = originalImage.getSubimage(/*x,y,w,h*/);
 
                 /* saving subImages as png into given path */
                 ImageIO.write(subImgage, "png", new File("/Users/ilkay/Desktop/subImage" + i + ".png"));
