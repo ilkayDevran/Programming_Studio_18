@@ -20,7 +20,7 @@ public class CropImage {
     public static void main(String[] args) {
 
         int[] percentages = {26, 60, 74};
-        function(percentages);
+        cropFunction(percentages);
     }
 
     public static BufferedImage readImage(String path) {
@@ -35,7 +35,7 @@ public class CropImage {
         return null;
     }
 
-    public static void function(int[] percentages) {
+    public static void cropFunction(int[] percentages) {
 
         /* partsOfImage: stores cropped parts */
         ArrayList<BufferedImage> partsOfImage = new ArrayList<>();
